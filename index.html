@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5播放器</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<div id="player">
+		<div id="video-wrap">
+			<video id="video" src="http://tb-video.bdstatic.com/tieba-smallvideo/785452_67b6272e17dd49da53f78d61b247bcc0.mp4"></video>
+			<div id="progress-wrap">
+				<div id="progress-time"></div>
+				<div id="progress-buffer"></div>
+				<div id="progress"></div>
+			</div>
+			<div id="loading">
+				<div></div>
+			</div>
+		</div>
+	
+		<div id="control">
+			<div class="left-side">
+				<i id="play" class="play"></i>
+				<p class="time">
+					<span class="current">00:00</span>
+					/
+					<span class="duration">00:00</span>
+				</p>
+			</div>
+			<div class="right-side">
+				<div class="sound-wrap wrap">
+					<i class="sound"></i>
+					<div class="soundControl">
+						<div class="soundNum">
+							<div class="soundNumProgress"></div>
+						</div>
+					</div>
+				</div>
+				<div class="rate-wrap wrap">
+					<i class="rate">1.0</i>
+					<div class="rateControl">
+						<ul class="selectRate">
+							<li><a href="javascript:;">0.75</a></li>
+							<li><a href="javascript:;">1.0</a></li>
+							<li><a href="javascript:;">1.25</a></li>
+							<li><a href="javascript:;">1.5</a></li>
+							<li><a href="javascript:;">1.75</a></li>
+							<li><a href="javascript:;">2.0</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- <input class="clarity" type="button" value="超清">
+				<input class="barrage" type="button" value="弹幕"> -->
+				<i class="fullScreen"></i>
+			</div>
+		</div>
+	</div>
+	<!-- player结束 -->
+	<ul id="contextMenu">
+		<li>made on 2016.0912</li>
+		<li>update on 2016.0918</li>
+		<li>copyright sone 2016</a></li>
+		<li><a href="javascript:;"  class="close">关闭</a></li>
+	</ul>
+</body>
+</html>

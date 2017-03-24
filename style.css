@@ -1,0 +1,270 @@
+body,div,video,input,button,p,span,ul,li,a {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+
+#player {
+	width: 860px;
+	margin: 20px auto;
+	text-align: center;
+}
+#player:hover #progress-wrap{
+	height: 8px;
+}
+#player:hover #progress-buffer{
+	height: 8px;
+}
+#player:hover #progress{
+	height: 8px;
+}
+#video-wrap {
+	height: 570px;
+	background: #000;
+	position: relative;
+}
+#video {
+	visibility: hidden;
+}
+/* 进度条 */
+#progress-wrap {
+	height: 3px;
+	width: 100%;
+	background: #eee;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+	transition: height 0.3s;
+}
+#progress-wrap #progress {
+	height: 3px;
+	background: #00a1d6;
+	transition: height 0.3s;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#progress-wrap #progress-buffer {
+	height: 3px;
+	background: #8adced;
+	transition: height 0.3s;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+#progress-wrap #progress-time {
+	position: absolute;
+	height: 15px;
+	padding: 2px 5px;
+	font-size: 14px;
+	color: #666;
+	background: #fff;
+	opacity: 0.7;
+	bottom: 8px;
+	left: 0;
+	display: none;
+}
+
+/* 等待图标 */
+#loading {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -8px 0 0 -8px;
+	display: none;
+}
+#loading > div {
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  height: 25px;
+  width: 25px;
+  background: transparent !important;
+  display: inline-block;
+  animation: rotate 0.75s 0s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1); 
+     }
+
+  50% {
+    -webkit-transform: rotate(180deg) scale(0.6);
+            transform: rotate(180deg) scale(0.6); 
+      }
+
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+            transform: rotate(360deg) scale(1); 
+        } 
+}
+
+/* 控制 */
+#control {
+	border: 1px solid #eee;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+}
+#control.fullScreenControl {
+	height: 0;
+	border: none;
+	position: absolute;
+	bottom: 8px;
+	transition: height 0.3s;
+}
+i {
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.left-side {
+	float: left;
+}
+.right-side {
+	float: right;
+	padding-right: 10px;
+}
+/* 播放、暂停 */
+#play {
+	margin: 0 10px 0 10px;
+	background: #fff;
+}
+.play {
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 16px solid #ccc;
+	border-right: 0;
+}
+.pause {
+	width: 6px;
+	height: 16px;
+	border-left: 5px solid #ccc;
+	border-right: 5px solid #ccc;
+}
+.time {
+	display: inline-block;
+	font-size: 12px;
+}
+
+.wrap {
+	display: inline-block;
+}
+
+/* 声音 */
+.sound-wrap {
+	position: relative;
+	margin-right: 10px;
+}
+.sound {
+	width: 16px;
+	height: 16px;
+	background: url("images/sound.png");
+}
+.soundControl {
+	width: 30px;
+	height: 80px;
+	background: #fff;
+	opacity: 1;
+	border: 1px solid #ccc;
+	position: absolute;
+	bottom: 40px;
+	left: -10px;
+	text-align: center;
+	display: none;
+}
+.soundNum {
+	width: 0;
+	height: 60px;
+	margin: 10px auto;
+	border-left: 8px solid #ddd;
+	cursor: pointer;
+	position: relative;
+}
+.soundNumProgress {
+	border-left: 8px solid #00a1d6;
+	position: absolute;
+	left: -8px;
+	bottom: 0;
+}
+
+/* 速率 */
+.rate-wrap {
+	width: 40px;
+	margin-right: 10px;
+	position: relative;
+}
+.rate-wrap:hover .rateControl {
+	display: block;
+}
+.rate {
+	font-size: 14px;
+	font-style: normal;
+}
+.rateControl {
+	width: 80px;
+	background: #fff;
+	opacity: 0.7;
+	display: none;
+	border: 1px solid #ccc;
+	position: absolute;
+	bottom: 40px;
+	left: -20px;
+}
+.selectRate li:hover {
+	background: #ccc;
+}
+.selectRate li a{
+	display: block;
+}
+/* 全屏按钮 */
+.fullScreen{
+	width: 16px;
+	height: 16px;
+	background: url("images/fullScreen.png");
+}
+
+/* contextMenu */
+#contextMenu {
+	width: 200px;
+	padding: 3px;
+	background: #111;
+	opacity: 0.8;
+	word-spacing: 3px;
+	position: absolute;
+	display: none;
+}
+#contextMenu li {
+	color: #999;
+	height: 25px;
+	line-height: 25px;
+	text-indent: 10px;
+}
+#contextMenu li a:hover {
+	background: #666;
+}
+#contextMenu .close {
+	display: block;
+	color: #fff;
+	font-size: 12px;
+	transition: background 0.3s;
+}
